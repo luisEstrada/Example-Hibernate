@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.luis.hibernateexample.domain.Student" table="STUDENT" catalog="hibernateexample">
+        <id name="studentId" type="java.lang.Integer">
+            <column name="student_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="studentName" type="string">
+            <column name="student_name" length="20" not-null="true" unique="true"/>
+        </property>
+        <property name="studentAge" type="string" length="20" not-null="true" unique="true">
+            <column name="student_age"/>
+        </property>
+    </class>
+</hibernate-mapping>
